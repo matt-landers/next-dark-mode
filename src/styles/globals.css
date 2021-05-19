@@ -1,0 +1,38 @@
+:root {
+  --color: white;
+  --shadow-color: rgba(255, 255, 255, 0.3);
+  --bg-color: black;
+  --container-width: 680px;
+  --transition-s: 0.25s;
+  --border-color: rgb(47, 51, 54);
+  --error-color: yellow;
+  --success-color: lightgreen;
+}
+
+[data-theme="light"] {
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --color: black;
+  --bg-color: white;
+  --border-color: invert(rgb(47, 51, 54));
+  --error-color: red;
+  --success-color: green;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--color);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}

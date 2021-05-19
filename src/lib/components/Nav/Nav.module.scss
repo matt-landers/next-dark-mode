@@ -1,0 +1,51 @@
+.nav {
+  color: var(--color);
+  padding: 1rem;
+  box-shadow: 1px 1px 5px 1px var(--shadow-color);
+  transition: box-shadow var(--transition-s) linear,
+    color var(--transition-s) linear;
+  a {
+    align-self: center;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  max-width: var(--container-width);
+  align-items: center;
+}
+
+.logo {
+  flex: 1;
+}
+
+@media (max-width: 600px) {
+  .logo {
+    display: none;
+  }
+  .container {
+    justify-content: space-between;
+  }
+  .buttonContainer {
+    flex: 1;
+  }
+}
+
+.toggle {
+  margin-left: 2rem;
+}
+
+.linkbutton {
+  background: var(--color);
+  color: var(--bg-color);
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+  border: 2px solid var(--bg-color);
+  transition: all 0.2s;
+  &:hover {
+    background: var(--bg-color);
+    border: 2px solid var(--color);
+    color: var(--color);
+  }
+}
