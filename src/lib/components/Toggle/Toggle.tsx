@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useTheme, themeActions } from '../../state/theme';
 import { useNextLayoutEffect } from '../../utils';
 
 import styles from './Toggle.module.scss';
 
 const Toggle: React.FC = () => {
-  const [theme, setTheme] = useState('dark');
+  const theme = useTheme();
 
   useNextLayoutEffect(() => {
     const html = document.querySelector('html');
@@ -21,7 +22,7 @@ const Toggle: React.FC = () => {
         type="checkbox"
         checked={theme && theme === 'light'}
         onChange={() => {
-          setTheme(theme === 'light' ? 'dark' : 'light');
+          themeActions.setTheme(theme === 'light' ? 'dark' : 'light');
         }}
       />
       <span className={[styles.slider, styles.round].join(' ')} />
